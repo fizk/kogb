@@ -1,0 +1,33 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../blocks/block-page.html">
+
+<dom-module id="page-index">
+    <style>
+        :host {
+            display: flex;
+            color: rgb(100,100,100);
+        }
+
+        block-page {
+            --block-page-visual: #1ea559;
+            --block-page-content: orange;
+        }
+    </style>
+    <template>
+        <block-page>
+            <div visual>
+                <h1>Index</h1>
+                <h2>Visual</h2>
+            </div>
+            <div content>
+                content
+            </div>
+        </block-page>
+    </template>
+    <script>
+        Polymer({
+            is: 'page-index'
+        });
+    </script>
+</dom-module>

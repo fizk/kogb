@@ -1,0 +1,34 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../blocks/block-page.html">
+
+<dom-module id="page-artists">
+    <style>
+        :host {
+            display: flex;
+            background-color: #3f5ca5;
+            color: white;
+        }
+
+        block-page {
+            --block-page-visual: #65b2a0;
+            --block-page-content: #15ffd6;
+        }
+    </style>
+    <template>
+        <block-page>
+            <div visual>
+                <h1>Artists</h1>
+                <h2>Visual</h2>
+            </div>
+            <div content>
+                content
+            </div>
+        </block-page>
+    </template>
+    <script>
+        Polymer({
+            is: 'page-artists'
+        })
+    </script>
+</dom-module>

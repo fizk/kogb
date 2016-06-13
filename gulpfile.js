@@ -32,7 +32,7 @@ gulp.task('sass', function () {
  * can be imported.
  */
 gulp.task('vulcanize', ['sass'], function () {
-    return gulp.src(['./src/kogb-app/kogb-app.html'])
+    return gulp.src(['./src/applications/kogb-app.html'])
         .pipe(vulcanize({inlineCss: true, inlineScripts: true})
             .on('error', console.log))
         .pipe(gulp.dest('./dist/'));

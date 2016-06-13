@@ -1,0 +1,49 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../elements/kogb-main-menu.html">
+
+<dom-module id="block-page">
+    <style>
+        :host {
+            display: flex;
+            width: 100%;
+        }
+        .block-page__visual {
+            width: 50%;
+            background-color: var(--block-page-visual, #006064);
+        }
+        .block-page__content {
+            width: 50%;
+            background-color: var(--block-page-content, #0097a7);
+        }
+
+        @media (max-width: 480px) {
+            :host {
+                height: 200vh;
+                flex-direction: column;
+            }
+
+            .block-page__visual {
+                width: 100%;
+                height: 100vh;
+            }
+            .block-page__content {
+                width: 100%;
+                height: 100vh;
+            }
+        }
+    </style>
+    <template>
+        <div class="block-page__visual">
+            <content select="[visual]"></content>
+        </div>
+        <div class="block-page__content">
+            <kogb-main-menu></kogb-main-menu>
+            <content select="[content]"></content>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'block-page'
+        })
+    </script>
+</dom-module>
