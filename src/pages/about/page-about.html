@@ -1,0 +1,31 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<dom-module id="page-about">
+    <style>
+        :host {
+            display: flex;
+            color: white;
+        }
+
+        block-page {
+            --block-page-visual: #a1b241;
+            --block-page-content: #439cff;
+        }
+    </style>
+    <template>
+        <block-page>
+            <div visual>
+                <h1>About</h1>
+                <h2>Visual</h2>
+            </div>
+            <div content>
+                content
+            </div>
+        </block-page>
+    </template>
+    <script>
+        Polymer({
+            is: 'page-about'
+        })
+    </script>
+</dom-module>

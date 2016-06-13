@@ -1,0 +1,57 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html">
+
+<link rel="import" href="../pages/about/page-about.html">
+<link rel="import" href="../pages/artists/page-artists.html">
+<link rel="import" href="../pages/index/page-index.html">
+<link rel="import" href="../pages/shows/page-shows.html">
+
+<dom-module id="kogb-app">
+    <style>
+        :host {
+            display: block;
+            background: rgb(255, 192, 203);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        neon-animated-pages {
+            height: 100%;
+        }
+    </style>
+    <template>
+        <app-location route="{{route}}"></app-location>
+        <app-route
+            route="{{route}}"
+            pattern="/:page"
+            data="{{pageData}}"
+            tail="{{pageTail}}">
+        </app-route>
+
+        <neon-animated-pages selected="{{pageData.page}}"
+                attr-for-selected='key'>
+            <page-index key=""></page-index>
+            <page-shows key="shows"></page-shows>
+            <page-artists key="artists"></page-artists>
+            <page-about key="about"></page-about>
+        </neon-animated-pages>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'kogb-app',
+
+            properties: {
+                route: {
+                    type: Object
+                }
+            },
+
+            attached: function () {
+                this.removeAttribute('unresolved');
+            }
+        });
+    </script>
+</dom-module>

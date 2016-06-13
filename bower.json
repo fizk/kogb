@@ -3,7 +3,8 @@
   "main": "index.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "app-route": "PolymerElements/app-route#^0.9.1"
+    "app-route": "PolymerElements/app-route#^0.9.1",
+    "neon-animation": "PolymerElements/neon-animation#^1.2.3"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
